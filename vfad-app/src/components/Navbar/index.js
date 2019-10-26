@@ -39,6 +39,15 @@ function Navbar() {
               Search
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              to="/host"
+              className={window.location.pathname === "/host" ? "nav-link active" : "nav-link"}
+            >
+              Host
+            </Link>
+          </li>
+          
         </ul>
       </div>
     </nav>
