@@ -11,6 +11,7 @@ import Alert from './components/Alert/index';
 import About from './pages/About';
 import Search from './pages/Search';
 import Login from './pages/Login';
+import Host from './pages/Host';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           {/* <Route exact path="/discover" component={Discover} /> */}
           <Route exact path="/search" component={Search} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/host" component={Host} />
         </Switch>
         <Footer />
       </div>
