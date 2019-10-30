@@ -39,13 +39,13 @@ function Host() {
                 Glide to the top of the Space Needle for panoramic views of the surrounding mountain ranges and Puget Sound.
 
             </p>
+              <h2>Why be a Host?</h2>
               <p>
-                Why be a host? Enjoy easy passive income from renting out extra room that is barely used.
+                Enjoy easy passive income from renting out an extra room that is barely used.
                 Why stop at just rooms or outdoor spaces? Go ahead and rent out your couch, extra mattress, driveway and back yard with a tent to enjoy even more earnings!
                 By using the full space of your property, you can quickly accumulate maximum revenue by efficiently using all available space!
                 Beautiful waterfront properties are waiting for you or non-affluent areas with used couches and mattresses!
-                By using VFAD you can get the best of both worlds!
-            </p>
+              </p>
             </Col>
           </Row>
         </Container>
@@ -102,6 +102,7 @@ function Host() {
   </Button>
       </Form>
     </Fragment>
+
   );
 }
 
