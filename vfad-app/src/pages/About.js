@@ -14,7 +14,6 @@ function About() {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome VFAD! Where you can search for short-term property and venue rentals!</h1>
           </Col>
         </Row>
         <Row>
@@ -32,7 +31,10 @@ function About() {
               mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
             </p>
+
+
             <h2>Popular Locations</h2>
+
             <p>
               Phasellus at rutrum nisl. Praesent sed massa ut ipsum bibendum porttitor. Sed
               malesuada molestie velit ac viverra. Quisque a ullamcorper purus. Curabitur luctus mi
@@ -62,4 +64,6 @@ function About() {
   );
 }
 
+
 export default About;
+
