@@ -7,14 +7,13 @@ import Col from "../components/Col";
 function About() {
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
+      <Hero backgroundImage="https://media.mnn.com/assets/images/2014/04/palm-tree-intro.jpg.653x0_q80_crop-smart.jpg">
+        <h1>Wish you could go on a...</h1>
+        <h2>Vacay for a day?</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To Pupster!</h1>
           </Col>
         </Row>
         <Row>
@@ -32,6 +31,10 @@ function About() {
               mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
               tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
             </p>
+
+
+            <h2>Popular Locations</h2>
+
             <p>
               Phasellus at rutrum nisl. Praesent sed massa ut ipsum bibendum porttitor. Sed
               malesuada molestie velit ac viverra. Quisque a ullamcorper purus. Curabitur luctus mi
@@ -61,4 +64,6 @@ function About() {
   );
 }
 
+
 export default About;
+
