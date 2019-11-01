@@ -8,16 +8,16 @@ import "./Login.css";
 import api from "../utils/api";
 
 class Login extends Component {
-    state = {
-        username: '',
-        password: '',
-    
-    }
+  state = {
+    username: '',
+    password: '',
+
+  }
 
 
 
 
-      // handle any changes to the input fields
+  // handle any changes to the input fields
   handleInputChange = event => {
     // Pull the name and value properties off of the event.target (the element which triggered the event)
     const { name, value } = event.target;
@@ -41,7 +41,7 @@ class Login extends Component {
 
   render() {
     return (
-    
+ 
       <form action="/" method="post">
         <p>Username: {this.state.username}</p>
         <p>Password: {this.state.password}</p>
