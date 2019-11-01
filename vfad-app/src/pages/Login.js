@@ -5,18 +5,19 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar";
 import "./Login.css";
+import api from "../utils/api";
 
 class Login extends Component {
-    state = {
-        username: '',
-        password: '',
-    
-    }
+  state = {
+    username: '',
+    password: '',
+
+  }
 
 
 
 
-      // handle any changes to the input fields
+  // handle any changes to the input fields
   handleInputChange = event => {
     // Pull the name and value properties off of the event.target (the element which triggered the event)
     const { name, value } = event.target;
@@ -30,14 +31,18 @@ class Login extends Component {
   // When the form is submitted, prevent the default event and alert the username and password
   handleFormSubmit = event => {
     event.preventDefault();
-    alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
+    let userInfo ={ username: this.state.username, password: this.state.password};
+    api.authetication(userInfo)
+    .then(res => {
+      console.log(res)
+    })
     this.setState({ username: "", password: "" });
   };
 
   render() {
     return (
-    
-      <form>
+ 
+      <form action="/" method="post">
         <p>Username: {this.state.username}</p>
         <p>Password: {this.state.password}</p>
         <input
