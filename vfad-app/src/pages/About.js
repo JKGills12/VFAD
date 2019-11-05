@@ -3,10 +3,11 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import Footer from "../components/Footer";
 
 function About() {
   return (
-    <div>
+    <div backgroundColor="white">
       <Hero backgroundImage="https://media.mnn.com/assets/images/2014/04/palm-tree-intro.jpg.653x0_q80_crop-smart.jpg">
         <h1>Wish you could go on a...</h1>
         <h2>Vacay for a day?</h2>
@@ -45,6 +46,7 @@ function About() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 }

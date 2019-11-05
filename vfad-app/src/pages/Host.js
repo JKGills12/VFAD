@@ -59,7 +59,7 @@ function Host() {
           </Row>
         </Container>
       </div>
-      {/* <Container>
+      <Container>
         <h2>Sign Up:</h2>
         <Form>
           <Form.Row>
@@ -124,7 +124,7 @@ function Host() {
             Submit
           </Button>
         </Form>
-      </Container> */}
+      </Container>
     </Fragment>
   );
 }
