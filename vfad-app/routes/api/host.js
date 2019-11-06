@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const hostController = require("../../controllers/hostController");
 
+
 // Matches with "/api/host"
 router.route("/")
   .get(hostController.findAll)
@@ -15,5 +16,6 @@ router
 
 router.route('/signup')
   .post(hostController.signUp)
+
 
 module.exports = router;

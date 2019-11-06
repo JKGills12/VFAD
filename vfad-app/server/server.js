@@ -46,6 +46,7 @@ const UserDetail = new Schema({
 const UserDetails = mongoose.model('userInfo', UserDetail, 'userInfo');
 
 //================================================================================
+// Host Database
 const hostSchema = new Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
@@ -109,6 +110,7 @@ app.get('/api/users', (req, res) => {
 })
 
 //================================================================================================
+// Host Database Post
 app.post('/api/host/signup', (req, res) => {
   console.log(req.body)
   Host.insertMany(req.body)
@@ -124,7 +126,6 @@ app.post('/api/host/signup', (req, res) => {
   res.json({ msg: 'sucessss!!!!' })
 })
 
-//=================================================================================================
 
 var corsOptions = {
   origin: '*',

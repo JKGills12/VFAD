@@ -6,10 +6,10 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import API from "../utils/api";
+import axios from "axios";
 
-//================================================================================================================
 
-// // Sending data to db
+// Sending data to db
 class Host extends Component {
   constructor(props) {
     super(props)
@@ -97,7 +97,7 @@ class Host extends Component {
     })
   }
 
-  //================================================================================================================
+
   render() {
     return (
       <Fragment>
@@ -266,7 +266,19 @@ class Host extends Component {
           </Button>
           </Form>
         </Container>
+        <Container>
+
+          {/* Image uploader */}
+          {/* <input type="file" onChange={this.fileSelectionHandler} />
+          <button onClick={this.fileUploadHandler}>Upload</button> */}
+          <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
+          </script>
+          <script>
+            cloudinary.setCloudName("my-cloud");
+</script>
+        </Container>
       </Fragment>
+
     );
   }
 }
