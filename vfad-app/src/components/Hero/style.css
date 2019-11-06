@@ -3,6 +3,9 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
 }
 
 .hero::after {
@@ -15,19 +18,25 @@
   left: 0;
   right: 0;
   background: black;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
 }
 
 .hero * {
   position: relative;
   z-index: 2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero h1, .hero h2 {
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero h1 {
   font-size: 60px;
   padding-top: 140px;
   margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
 }

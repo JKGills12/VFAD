@@ -1,6 +1,12 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
+li {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 /* @media (prefers-color-scheme: dark) {
   body {

@@ -3,33 +3,33 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import './About.css';
+
 
 function About() {
   return (
-    <div>
-      <Hero backgroundImage="https://media.mnn.com/assets/images/2014/04/palm-tree-intro.jpg.653x0_q80_crop-smart.jpg">
-        <h1>Wish you could go on a...</h1>
-        <h2>Vacay for a day?</h2>
+    <div backgroundColor="white">
+      <Hero backgroundImage="https://d2ern41v4fpcqm.cloudfront.net/media/gallery/property-62369/i089793_preview.jpg">
+        <h1>Garden Party? Bridal Shower? Pool Party? </h1>
+        <h2>Explore VFAD's short-term property rentals today!</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
+      <div className="inner-container" />
         <Row>
+
           <Col size="md-12">
-            <h1>
-              Welcome VFAD! Where you can search for short-term property and
-              venue rentals!
+            
+            <h1 className="inner-text">
+              VACAY FOR A DAY (VFAD)
             </h1>
+            <h2>Search for short-term property rentals today!</h2>
           </Col>
         </Row>
         <Row>
           <Col size="md-12">
             <p>
-              Do you have a rental property for short-term listing in the
-              Seattle area? Are you interested in the finding the best location
-              to crash and stay locally? Say goodbye to the everyday grind with
-              an exciting vacation to this vibrant city. Find the perfect
-              vacation home, space, room or outdoor venue to rent and discover
-              the limitless activities and attractions that these short-term
-              rentals have to offer.
+              Did you ever want to go to the lake on a hot summer day but avoid the masses? Maybe you need a larger space to throw an event, or don't have any room in your kitchen to make that holiday dinner. This is what VFAD sets out to solve for you. Find the perfect afternoon activity, space, outdoor venue to book today.
+          
             </p>
             <h2>Popular Locations</h2>
             <p>
@@ -41,10 +41,13 @@ function About() {
               Glass, which will dazzle you with its colorful and delicate works.
               Glide to the top of the Space Needle for panoramic views of the
               surrounding mountain ranges and Puget Sound.
-            </p>
+            </p>  
           </Col>
+         
         </Row>
+       
       </Container>
+     
     </div>
   );
 }
