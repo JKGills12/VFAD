@@ -1,16 +1,34 @@
 import React from "react";
 import reactDOM from "react-dom";
-
-// import Hero from "../components/Hero";
-// import Container from "../components/Container";
-// import Row from "../components/Row";
-// import Col from "../components/Col";
-// import Navbar from "../components/Navbar";
 import "./Login.css";
-import Footer from "../components/Footer";
-// import api from "../utils/api";
+import api from "../utils/api";
 
 class Login extends React.Component {
+  state = {
+    username: '',
+    password: '',
+  }
+  // handle any changes to the input fields
+  handleInputChange = event => {
+    // Pull the name and value properties off of the event.target (the element which triggered the event)
+    const { name, value } = event.target;
+    // Set the state for the appropriate input field
+    this.setState({
+      [name]: value
+    });
+  };
+  // When the form is submitted, prevent the default event and alert the username and password
+  handleFormSubmit = event => {
+    event.preventDefault();
+    let userInfo = { username: this.state.username, password: this.state.password };
+    api.authentication(userInfo)
+      .then(res => {
+        console.log(res);
+        console.log("should be the msg: ", res.data);
+        alert(res.data);
+      })
+    this.setState({ username: "", password: "" });
+  };
 
   constructor(props){
     super(props);
@@ -65,20 +83,20 @@ class LoginBox extends React.Component {
   return (
    
   <div className="inner-container">
-    <div className="header">
+    <div className="header" action="/" method="post">
       Login
     </div>
     <div className="box">
       <div className="input-group">
-        <label htmlFor="username">Username</label>
-        <input type="text" name="username" className="login-input" placeholder="Username" />
+        <label htmlFor="username">Username {this.state.username}</label>
+        <input type="text" name="username" className="login-input" placeholder="Username" value={this.state.username} onChange={this.handleInputChange} />
       </div>
       <div className="input-group">
-        <label htmlFor="password">Password</label>
-        <input type="text" name="password" className="login-input" placeholder="Password" />
+        <label htmlFor="password">Password {this.state.password} </label>
+        <input type="text" name="password" className="login-input" placeholder="Password" value={this.state.password} onChange={this.handleInputChange} />
       </div>
 
-      <button type="button" className="login-btn" onClick={this.submitLogin.bind(this)}>Submit</button>
+      <button type="button" className="login-btn" onClick={this.handleFormSubmit}>Submit</button>
 
     </div>
    
@@ -101,86 +119,28 @@ class RegisterBox extends React.Component {
 render() {
   return (
   <div className="inner-container">
-    <div className="header">
+    <div className="header" action="/" method="post">
       Sign Up
     </div>
     <div className="box">
       <div className="input-group">
-        <label htmlFor="username">Username</label>
-        <input type="text" name="username" className="login-input" placeholder="Username" />
+        <label htmlFor="username">Username {this.state.username}</label>
+        <input type="text" name="username" className="login-input" placeholder="Username" value={this.state.username} onChange={this.handleInputChange} />
       </div>
       <div className="input-group">
-        <label htmlFor="password">Password</label>
-        <input type="text" name="password" className="login-input" placeholder="Password" />
+        <label htmlFor="password">Password {this.state.password}</label>
+        <input type="text" name="password" className="login-input" placeholder="Password" value={this.state.password} onChange={this.handleInputChange} />
       </div>
 
-      <button type="button" className="login-btn" onClick={this.submitRegister.bind(this)}>Login</button>
+      <button type="button" className="login-btn" onClick={this.handleFormSubmit}>Submit</button>
 
     </div>
-    <Footer />
+    
   </div>
   );}
 
 }
 
 reactDOM.render(<Login />, document.getElementById("root"));
-
-
-//   state = {
-//     username: '',
-//     password: '',
-
-//   }
-
-
-
-
-//   // handle any changes to the input fields
-//   handleInputChange = event => {
-//     // Pull the name and value properties off of the event.target (the element which triggered the event)
-//     const { name, value } = event.target;
-
-//     // Set the state for the appropriate input field
-//     this.setState({
-//       [name]: value
-//     });
-//   };
-
-//   // When the form is submitted, prevent the default event and alert the username and password
-//   handleFormSubmit = event => {
-//     event.preventDefault();
-//     let userInfo ={ username: this.state.username, password: this.state.password};
-//     api.authetication(userInfo)
-//     .then(res => {
-//       console.log(res)
-//     })
-//     this.setState({ username: "", password: "" });
-//   };
-
-//   render() {
-//     return (
- 
-//       <form action="/" method="post">
-//         <p>Username: {this.state.username}</p>
-//         <p>Password: {this.state.password}</p>
-//         <input
-//           type="text"
-//           placeholder="Username"
-//           name="username"
-//           value={this.state.username}
-//           onChange={this.handleInputChange}
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           name="password"
-//           value={this.state.password}
-//           onChange={this.handleInputChange}
-//         />
-//         <button onClick={this.handleFormSubmit}>Submit</button>
-//       </form>
-//     );
-//   }
-// }
 
 export default Login;

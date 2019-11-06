@@ -1,0 +1,20 @@
+
+h1,
+h2
+{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.inner-container {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 30;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+
