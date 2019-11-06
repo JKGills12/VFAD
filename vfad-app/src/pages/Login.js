@@ -3,34 +3,12 @@ import reactDOM from "react-dom";
 import "./Login.css";
 import api from "../utils/api";
 
+
 class Login extends React.Component {
   state = {
     username: '',
     password: '',
   }
-  // handle any changes to the input fields
-  handleInputChange = event => {
-    // Pull the name and value properties off of the event.target (the element which triggered the event)
-    const { name, value } = event.target;
-    // Set the state for the appropriate input field
-    this.setState({
-      [name]: value
-    });
-  };
-
-  // When the form is submitted, prevent the default event and alert the username and password
-  handleFormSubmit = event => {
-    event.preventDefault();
-    let userInfo = { username: this.state.username, password: this.state.password };
-    api.authentication(userInfo)
-      .then(res => {
-        console.log(res);
-        console.log("should be the msg: ", res.data);
-        alert(res.data);
-      })
-    this.setState({ username: "", password: "" });
-  };
-
   constructor(props) {
     super(props);
     this.state = { isLoginOpen: true, isRegisterOpen: false };
@@ -59,18 +37,50 @@ class Login extends React.Component {
         </div>
           </div>
           <div className="box-container">
-            {this.state.isLoginOpen && <LoginBox />}
+            {this.state.isLoginOpen && <LoginBox
+            />}
             {this.state.isRegisterOpen && <RegisterBox />}
           </div>
         </div>
       </div>);
   }
 }
+
+
 class LoginBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
+    state = {
+      username: '',
+      password: ''
+  }
+
+    // handle any changes to the input fields
+    handleInputChange = event => {
+      // Pull the name and value properties off of the event.target (the element which triggered the event)
+      const { name, value } = event.target;
+      // Set the state for the appropriate input field
+      this.setState({
+        [name]: value
+      });
+    };
+  
+    // When the form is submitted, prevent the default event and alert the username and password
+    handleFormSubmit = event => {
+      event.preventDefault();
+      let userInfo = { username: this.state.username, password: this.state.password };
+      console.log(userInfo)
+      api.authentication(userInfo)
+        .then(res => {
+          console.log(res);
+          console.log("should be the msg: ", res.data);
+          alert(res.data);
+        })
+      this.setState({ username: "", password: "" });
+    };
+  
+
   submitLogin(e) {
   }
 

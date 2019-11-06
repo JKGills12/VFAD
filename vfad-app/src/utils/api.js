@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-    authetication: function (userInfo) {
+    authentication: function (userInfo) {
         console.log(userInfo, "inside api");
         return axios.post("/api/login", userInfo);
     },

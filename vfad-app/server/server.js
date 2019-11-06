@@ -15,7 +15,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/success', (req, res) => {
-  window.alert()
   res.send("Welcome " + req.query.username + "!!")
 });
 app.get('/error', (req, res) => res.send("error logging in"));
@@ -99,7 +98,8 @@ passport.use(new LocalStrategy(
 
 app.post('/api/login', (req, res) => {
 
-  console.log(req.body, "req");
+  //console.log(req, "req");
+  //res.send(req)
   res.redirect('/success?username=' + req.body.username);
 });
 
