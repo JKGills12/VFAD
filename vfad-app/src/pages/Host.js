@@ -97,6 +97,7 @@ class Host extends Component {
     })
   }
 
+
   render() {
     return (
       <Fragment>
@@ -268,8 +269,13 @@ class Host extends Component {
         <Container>
 
           {/* Image uploader */}
-          <input type="file" onChange={this.fileSelectionHandler} />
-          <button onClick={this.fileUploadHandler}>Upload</button>
+          {/* <input type="file" onChange={this.fileSelectionHandler} />
+          <button onClick={this.fileUploadHandler}>Upload</button> */}
+          <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
+          </script>
+          <script>
+            cloudinary.setCloudName("my-cloud");
+</script>
         </Container>
       </Fragment>
 
