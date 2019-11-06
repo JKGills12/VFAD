@@ -67,16 +67,36 @@ showRegisterBox() {
     </div>);
   }
 }
-
 class LoginBox extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {};
   }
-
   submitLogin(e) {
+  }
 
+  render() {
+    return (
+
+      <div className="inner-container">
+        <div className="header" action="/" method="post">
+          Login
+    </div>
+        <div className="box">
+          <div className="input-group">
+            <label htmlFor="username">Username {this.state.username}</label>
+            <input type="text" name="username" className="login-input" placeholder="Username" value={this.state.username} onChange={this.handleInputChange} />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password {this.state.password} </label>
+            <input type="text" name="password" className="login-input" placeholder="Password" value={this.state.password} onChange={this.handleInputChange} />
+          </div>
+          <button type="button" className="login-btn" onClick={this.handleFormSubmit}>Submit</button>
+        </div>
+
+      </div>
+
+    );
   }
 
   render() {
@@ -105,42 +125,35 @@ class LoginBox extends React.Component {
   );
 }
 }
-
 class RegisterBox extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {};
   }
-
   submitRegister(e) {
-
   }
-render() {
-  return (
-  <div className="inner-container">
-    <div className="header" action="/" method="post">
-      Sign Up
+  render() {
+    return (
+      <div className="inner-container">
+        <div className="header" action="/" method="post">
+          Sign Up
     </div>
-    <div className="box">
-      <div className="input-group">
-        <label htmlFor="username">Username {this.state.username}</label>
-        <input type="text" name="username" className="login-input" placeholder="Username" value={this.state.username} onChange={this.handleInputChange} />
+        <div className="box">
+          <div className="input-group">
+            <label htmlFor="username">Username {this.state.username}</label>
+            <input type="text" name="username" className="login-input" placeholder="Username" value={this.state.username} onChange={this.handleInputChange} />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password {this.state.password}</label>
+            <input type="text" name="password" className="login-input" placeholder="Password" value={this.state.password} onChange={this.handleInputChange} />
+          </div>
+          <button type="button" className="login-btn" onClick={this.handleFormSubmit}>Submit</button>
+        </div>
+
       </div>
-      <div className="input-group">
-        <label htmlFor="password">Password {this.state.password}</label>
-        <input type="text" name="password" className="login-input" placeholder="Password" value={this.state.password} onChange={this.handleInputChange} />
-      </div>
-
-      <button type="button" className="login-btn" onClick={this.handleFormSubmit}>Submit</button>
-
-    </div>
-    
-  </div>
-  );}
-
+    );
+  }
 }
-
 reactDOM.render(<Login />, document.getElementById("root"));
 
 export default Login;
