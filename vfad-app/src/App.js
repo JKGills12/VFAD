@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Search from './pages/Search';
 import Login from './pages/Login';
-// import Host from './pages/Host';
+import Host from './pages/Host';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           {/* <Route exact path="/discover" component={Discover} /> */}
           <Route exact path="/search" component={Search} />
           <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/host" component={Host} /> */}
+          <Route exact path="/host" component={Host} />
         </Switch>
         <Footer />
       </div>

@@ -14,11 +14,11 @@ function About() {
         <h2>Explore VFAD's short-term property rentals today!</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
-      <div className="inner-container" />
+        <div className="inner-container" />
         <Row>
 
           <Col size="md-12">
-            
+
             <h1 className="inner-text">
               VACAY FOR A DAY (VFAD)
             </h1>
@@ -29,7 +29,7 @@ function About() {
           <Col size="md-12">
             <p>
               Did you ever want to go to the lake on a hot summer day but avoid the masses? Maybe you need a larger space to throw an event, or don't have any room in your kitchen to make that holiday dinner. This is what VFAD sets out to solve for you. Find the perfect afternoon activity, space, outdoor venue to book today.
-          
+
             </p>
             <h2>Popular Locations</h2>
             <p>
@@ -41,13 +41,13 @@ function About() {
               Glass, which will dazzle you with its colorful and delicate works.
               Glide to the top of the Space Needle for panoramic views of the
               surrounding mountain ranges and Puget Sound.
-            </p>  
+            </p>
           </Col>
-         
+
         </Row>
-       
+
       </Container>
-     
+
     </div>
   );
 }
