@@ -1,0 +1,35 @@
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.inner-container {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 30;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.form-check-input {
+  margin-left: -22.25px;
+  width: 5%;
+  height: 100%;
+  margin-left: 6rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 50%;
+  margin-bottom: 40px;
+}
+
+select#formGridState.form-control {
+  margin: 0 0 10px;
+  padding: 3px 12px;
+  margin-top: 18px;
+  height: 45%;
+}
