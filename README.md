@@ -6,4 +6,7 @@ VFAD is Vacation For A Day. This web app's goal is to allow users (hosts) who wa
 
 Our stretch goal is to add the ability to place other items for rentals, such as boat, kitchen, and motorhome, etc. There will eventually be feature where hosts can upload their rental property and it will store it in a database.
 
+[VFAD] (https://vfad2.herokuapp.com/)
+
+[GitHub] (https://github.com/JKGills12/vfad3)
 
