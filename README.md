@@ -1,4 +1,6 @@
 # VFAD
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJKGills12%2FVFAD.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FJKGills12%2FVFAD?ref=badge_shield)
+
 Vacay For A Day (Project 3)
 
 ## Description
@@ -10,3 +12,7 @@ Our stretch goal is to add the ability to place other items for rentals, such as
 
 [GitHub] (https://github.com/JKGills12/vfad3)
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FJKGills12%2FVFAD.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FJKGills12%2FVFAD?ref=badge_large)
